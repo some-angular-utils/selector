@@ -5,36 +5,51 @@
     "ng": "ng",
     "start": "ng serve",
     "dev": "npm run build:lib && npm run start",
-    "build": "ng build --base-href=/table/",
+    "build": "ng build --base-href=/selector/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:lib": "ng-packagr -p projects/some-angular-utils/selector/ng-package.json",
-    "build:gh-pages": "npm run build:lib && npm run build"
+    "start:storybook": "ng run @some-angular-utils/selector:storybook",
+    "build:storybook": "ng run @some-angular-utils/selector:build-storybook"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
   },
   "private": true,
+  "packageManager": "npm@10.9.3",
   "dependencies": {
-    "@angular/common": "^20.0.0",
-    "@angular/compiler": "^20.0.0",
-    "@angular/core": "^20.0.0",
-    "@angular/forms": "^20.0.0",
-    "@angular/platform-browser": "^20.0.0",
-    "@angular/router": "^20.0.0",
+    "@angular/common": "^21.0.0",
+    "@angular/compiler": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/forms": "^21.0.0",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/router": "^21.0.0",
+    "@storybook/preview-api": "^8.6.14",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^20.0.0",
-    "@angular/cli": "^20.0.0",
-    "@angular/compiler-cli": "^20.0.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.7.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "ng-packagr": "^20.3.0",
-    "typescript": "~5.8.2"
+    "@angular-devkit/architect": "^0.2100.0",
+    "@angular-devkit/build-angular": "^21.0.0",
+    "@angular-devkit/core": "^21.0.0",
+    "@angular/build": "^21.0.4",
+    "@angular/cli": "^21.0.4",
+    "@angular/compiler-cli": "^21.0.0",
+    "@angular/platform-browser-dynamic": "^21.0.0",
+    "@storybook/angular": "^10.2.3",
+    "jsdom": "^27.1.0",
+    "ng-packagr": "^21.0.0",
+    "storybook": "^10.2.3",
+    "typescript": "~5.9.2",
+    "vitest": "^4.0.8"
   }
 }

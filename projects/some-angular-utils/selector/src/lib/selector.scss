@@ -1,0 +1,67 @@
+.sau-selector {
+    --sau-color-primary: rgb(147, 51, 234);
+    --sau-color-secondary: var(--sau-color-primary);
+    --sau-color-background: rgb(255, 255, 255);
+    --sau-color-edit: rgb(34, 197, 94);
+    --sau-color-delete: rgb(239, 68, 68);
+    --sau-color-text: rgb(31, 41, 55);
+
+    width: 100%;
+    display: block;
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+
+        @media (min-width: 576px) {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+
+        @media (min-width: 992px) {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        @media (min-width: 1200px) {
+            flex: 0 0 16.666667%;
+            max-width: 16.666667%;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        width: 100%;
+        margin-top: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    &__btn {
+        background-color: var(--sau-color-primary);
+        color: var(--sau-color-background);
+        font-size: 0.875rem;
+        font-weight: bold;
+        padding: 0.5rem 1.25rem;
+        border: none;
+        border-radius: 0.75rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+
+        &:hover {
+            background-color: var(--sau-color-primary);
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}

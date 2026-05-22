@@ -1,0 +1,49 @@
+.sau-input {
+    display: block;
+    font-size: 0.875rem;
+    color: #000000;
+    letter-spacing: -0.025em;
+
+    &__label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    &__field {
+        width: calc(100% - 0.75rem);
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        font-size: 0.75rem;
+        color: #334155;
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.75rem;
+        outline: none;
+        transition: all 0.1s ease-in;
+
+        &::placeholder {
+            color: #a3a3a3;
+        }
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #000000;
+            box-shadow: 0 0 0 1px #000000,
+                0 10px 15px -3px rgba(0, 0, 0, 0.05),
+                0 4px 6px -4px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    &__error {
+        color: #dc2626; // text-red-600
+        font-size: 0.75rem; // text-xs
+        margin-top: 0.25rem; // mt-1
+    }
+}
