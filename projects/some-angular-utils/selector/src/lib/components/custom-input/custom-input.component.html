@@ -3,12 +3,12 @@
     
     <label class="sau-input__label">
         {{label}}
+    
+        <input [type]="type" 
+            [placeholder]="placeholder" 
+            [formControl]="inputControl" 
+            class="sau-input__field">
     </label>
-
-    <input [type]="type" 
-           [placeholder]="placeholder" 
-           [formControl]="inputControl" 
-           class="sau-input__field">
 
     @if(formControlItem.invalid && (formControlItem.touched || formControlItem.dirty)){
     <div class="sau-input__error">

@@ -11,7 +11,7 @@ import { useArgs } from '@storybook/preview-api';
 import { SAUSelectorModule } from '../public-api';
 
 const meta: Meta<SAUSelectorModule> = {
-    title: 'Components/SAUSelector',
+    title: 'Components/Selector',
     component: SAUSelectorModule,
     decorators: [
         moduleMetadata({
